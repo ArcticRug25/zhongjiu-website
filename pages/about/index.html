@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../libs/scrollReveal/scrollreveal.min.js"></script>
+
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>峰华科技 - 创新型网络技术企业</title>
+  </head>
+  <body>
+    <!-- 头部 -->
+    <header class="open">
+      <div class="logo">中酒</div>
+      <!-- 导航 -->
+      <nav>
+        <a href="../../index.html">首页</a>
+        <a href="">关于中酒</a>
+        <a href="#team-intro">产品展示</a>
+        <a href="#company-activities">公司动态</a>
+        <a href="#about-us">关注我们</a>
+        <i class="fas fa-search"></i>
+      </nav>
+      <!-- 折叠导航按钮 -->
+      <div class="burger">
+        <div class="burger-line1"></div>
+        <div class="burger-line2"></div>
+        <div class="burger-line3"></div>
+      </div>
+    </header>
+    <!-- 首页图片轮播，使用glide JS插件 -->
+    <div class="glide" id="home">
+      <img src="../../images/banner.png" alt="">
+    </div>
+    <!-- 内容容器 -->
+    <div class="content-wrapper">
+      <!-- 企业简介， id用来导航菜单跳转 -->
+      <section id="company-intro" class="company-intro">
+        <!-- 标题 -->
+        <h2 class="title1">企业简介</h2>
+        <!-- 补充说明区域 -->
+        <p class="intro">
+          中酒，位于黔北茅台镇，与茅台一衣带水，秉福地之空灵，萃五谷之精华；汲赤水之纯元，拥酱香之秘方。
+        </p>
+        <p class="intro">
+          煮酒论史，笑谈沧桑；投著而歌，不负金觞。上古开果酒之肇始，周礼记醴酪之滥觞。仪狄作醪，大禹尝美而疏之；杜康造酒，刘伶醉卧思琼浆；明代书法家王宠书之《中酒》。悠悠酒史，源远流长。赤水河畔，自秦汉以来，盛行家酿。汉武帝畅饮枸酱，赞叹“甘美之”；红军长征渡赤水，以中酒疗伤。共和复兴，无上妙品暖心肠。
+        </p>
+        <p class="intro">
+          纳山川灵韵；秉千年古法；酱香中酒，顺应天地，陈贮数载，精心勾兑，幽雅细腻，空杯留香。名号中酒，瑶台斗艳争芳。中华礼仪之邦，开枝散叶，婚丧嫁娶，迎来送往，于宴于情诚不可无酒矣。若逢喜事好事快乐事，畅饮酱香之中酒，一醉方休又何妨！
+        </p>
+      </section>
+      <!-- 介绍视频， id用来导航菜单跳转 -->
+      <section id="company-intro-video" class="company-intro-video">
+        <!-- 标题 -->
+        <h2 class="title1">公司介绍视频</h2>
+        <div class="company-video">
+          <video src="../../videos/1921.mp4" muted autoplay loop></video>
+        </div>
+      </section>
+      <!-- 关于我们， id用来导航菜单跳转 -->
+      <section id="about-us" class="about-us">
+        <!-- 标题 -->
+        <h2 class="title1">关注我们</h2>
+        <!-- 补充说明区域 -->
+        <p class="intro">
+          网络公司不仅仅是提供域名注册、空间租用、网站开发、网站建设与网络营销活动策划相关的企业组织。
+        </p>
+        <!-- 公司业务容器，栅格布局 -->
+        <div class="contact-me">
+          <div class="wechat-code">
+            <img src="../../images/WechatIMG318.jpeg" alt="">
+          </div>
+          <div class="wechat-code">
+            <img src="../../images/WechatIMG319.jpeg" alt="">
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- 底部信息 -->
+    <footer>
+      <!-- 底部菜单 -->
+      <div class="footer-menus">
+        <!-- 联系信息 -->
+        <div class="contact-us">
+          <p class="menu-title">联系我们</p>
+          <p>地址：中国XX省XX市XX路XX商务中心10号楼</p>
+          <p>电话：+18618618611861</p>
+          <p>传真：+18618618611861</p>
+          <p>电子邮箱：admin@abc.com</p>
+        </div>
+        <!-- 导航菜单 -->
+        <div class="service-menu footer-menu">
+          <p class="menu-title">服务概览</p>
+          <ul class="menu-items">
+            <li><a href="#">网站建设</a></li>
+            <li><a href="#">域名购买</a></li>
+            <li><a href="#">网页设计</a></li>
+            <li><a href="#">移动应用</a></li>
+          </ul>
+        </div>
+        <div class="showcase-menu footer-menu">
+          <p class="menu-title">成功案例</p>
+          <ul class="menu-items">
+            <li><a href="#">桌面网站</a></li>
+            <li><a href="#">移动网站</a></li>
+            <li><a href="#">科研项目</a></li>
+            <li><a href="#">软件应用</a></li>
+          </ul>
+        </div>
+        <div class="activity-menu footer-menu">
+          <p class="menu-title">公司动态</p>
+          <ul class="menu-items">
+            <li><a href="#">信息公开</a></li>
+            <li><a href="#">最近新闻</a></li>
+            <li><a href="#">最新博客</a></li>
+          </ul>
+        </div>
+        <div class="help-menu footer-menu">
+          <p class="menu-title">帮助与支持</p>
+          <ul class="menu-items">
+            <li><a href="#">帮助中心</a></li>
+            <li><a href="#">联系客服</a></li>
+            <li><a href="#">文档资源</a></li>
+          </ul>
+        </div>
+        <!-- 备案信息 -->
+        <p class="icp-info">
+          京ICP备 12345678901-1 号
+        </p>
+        <!-- 版权信息 -->
+        <p class="rights">
+          &copy; 2020 峰华科技 - 响应式网络公司官网 版权所有
+        </p>
+        <!-- 返回顶部按钮 -->
+        <div class="scrollToTop">
+          <a href="#home"><i class="fas fa-chevron-up"></i></a>
+        </div>
+      </div>
+    </footer>
+    <!-- 自定义JS文件 -->
+    <script src="index.js"></script>
+  </body>
+</html>

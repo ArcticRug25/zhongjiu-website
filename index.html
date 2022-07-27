@@ -19,15 +19,14 @@
   <body>
     <!-- 头部 -->
     <header class="open">
-      <div class="logo">峰华科技</div>
+      <div class="logo">中酒</div>
       <!-- 导航 -->
       <nav>
         <a href="#home">首页</a>
-        <a href="#about-us">关于我们</a>
-        <a href="#showcases">成功案例</a>
-        <a href="#service">服务流程</a>
-        <a href="#team-intro">团队介绍</a>
+        <a href="./pages/about/index.html">关于中酒</a>
+        <a href="#team-intro">产品展示</a>
         <a href="#company-activities">公司动态</a>
+        <a href="#about-us">关注我们</a>
         <i class="fas fa-search"></i>
       </nav>
       <!-- 折叠导航按钮 -->
@@ -57,7 +56,7 @@
             <!-- 背景遮罩 -->
             <div class="backdrop"></div>
             <!-- 轮播图片 -->
-            <img src="images/people-in-couch-1024248.jpg" alt="" />
+            <img src="images/banner.png" alt="" />
           </div>
           <!-- 第二张轮播 -->
           <div class="glide__slide">
@@ -70,7 +69,7 @@
             </div>
             <div class="backdrop"></div>
             <!-- 轮播视频 -->
-            <video src="videos/working-man.mp4" muted autoplay loop></video>
+            <video src="videos/1921.mp4" muted autoplay loop></video>
           </div>
         </div>
       </div>
@@ -91,68 +90,50 @@
     </div>
     <!-- 内容容器 -->
     <div class="content-wrapper">
-      <!-- 关于我们， id用来导航菜单跳转 -->
-      <section id="about-us" class="about-us">
-        <!-- 标题 -->
-        <h2 class="title1">关于我们</h2>
-        <!-- 补充说明区域 -->
-        <p class="intro">
-          网络公司不仅仅是提供域名注册、空间租用、网站开发、网站建设与网络营销活动策划相关的企业组织。
-        </p>
-        <!-- 公司业务容器，栅格布局 -->
-        <div class="features">
-          <!-- 公司业务 -->
-          <div class="feature">
-            <!-- 左侧业务图标 -->
-            <i class="fas fa-lightbulb"></i>
-            <!-- 右侧业务标题 -->
-            <h4 class="feature-title">品牌创意</h4>
-            <!-- 右侧业务内容 -->
-            <p class="feature-content">
-              为企业设计独特的并能完美呈现企业价值观的视觉
-            </p>
+      <!-- 团队介绍 -->
+      <section id="team-intro" class="team-intro section-bg">
+        <h2 class="title1">产品展示</h2>
+        <!-- 团队成员容器 -->
+        <div class="team-members">
+          <!-- 团队成员 -->
+          <div class="team-member">
+            <!-- 成员照片 -->
+            <div class="profile-image">
+              <img src="images/IMG_4576.png" alt="初心" />
+            </div>
+            <!-- 成员姓名 -->
+            <h4 class="name">初心系列</h4>
+            <!-- 成员职位 -->
           </div>
-          <div class="feature">
-            <i class="fas fa-chart-line"></i>
-            <h4 class="feature-title">整合营销</h4>
-            <p class="feature-content">
-              通过市场进入分析、制定网络营销战略、网络营销实施
-            </p>
+          <div class="team-member">
+            <div class="profile-image">
+              <img
+                src="images/IMG_5948.png"
+                alt="大师级"
+              />
+            </div>
+            <h4 class="name">大师级系列</h4>
           </div>
-          <div class="feature">
-            <i class="fas fa-shopping-cart"></i>
-            <h4 class="feature-title">电子商务</h4>
-            <p class="feature-content">
-              根据企业需求，开设不同的销售渠道，通过网上直销
-            </p>
+          <div class="team-member">
+            <div class="profile-image">
+              <img
+                src="images/guoxiang-10.png"
+                alt="国香"
+              />
+            </div>
+            <h4 class="name">国香系列</h4>
           </div>
-          <div class="feature">
-            <i class="fas fa-desktop"></i>
-            <h4 class="feature-title">网页设计</h4>
-            <p class="feature-content">
-              通过网站建设、智能建站、域名主机、企业邮箱
-            </p>
-          </div>
-          <div class="feature">
-            <i class="fas fa-tachometer-alt"></i>
-            <h4 class="feature-title">网站优化</h4>
-            <p class="feature-content">
-              网站推广是指将网站推广到国内各大知名网站和搜索引擎
-            </p>
-          </div>
-          <div class="feature">
-            <i class="fas fa-server"></i>
-            <h4 class="feature-title">网站架设</h4>
-            <p class="feature-content">
-              通过绑定域名和服务器，把网站展现给全世界
-            </p>
+          <div class="team-member">
+            <div class="profile-image">
+              <img src="images/IMG_5642.png" alt="问道" />
+            </div>
+            <h4 class="name">问道系列</h4>
           </div>
         </div>
       </section>
-      <!-- 成功案例 -->
+            <!-- 成功案例 -->
       <!-- section-bg 区域灰色背景 -->
       <section id="showcases" class="showcases section-bg">
-        <h2 class="title1">成功案例</h2>
         <!-- 筛选按钮 -->
         <div class="filter-btns">
           <button class="filter-btn active" data-filter="*">
@@ -160,13 +141,13 @@
           </button>
           <!-- 指定要过滤的class selector，包括. -->
           <button class="filter-btn" data-filter=".web">
-            WEB
+            国香
           </button>
           <button class="filter-btn" data-filter=".mobile">
-            移动
+            问道
           </button>
           <button class="filter-btn" data-filter=".science">
-            科研
+            初心
           </button>
         </div>
         <!-- 案例 -->
@@ -175,221 +156,40 @@
           <div class="case-item web science">
             <!-- 图片 -->
             <img
-              src="images/gray-laptop-computer-showing-html-codes-in-shallow-focus-160107.jpg"
+              src="images/IMG_4761.png"
               alt=""
             />
           </div>
           <div class="case-item web science">
-            <img src="images/photo-of-imac-near-macbook-1029757.jpg" alt="" />
+            <img src="images/IMG_4761.png" alt="" />
           </div>
           <div class="case-item web">
-            <img src="images/apple-laptop-notebook-office-39284.jpg" alt="" />
+            <img src="images/IMG_4761.png" alt="" />
           </div>
           <div class="case-item web">
             <img
-              src="images/apple-apple-device-design-desk-285814.jpg"
+              src="images/IMG_4761.png"
               alt=""
             />
           </div>
           <div class="case-item mobile">
             <img
-              src="images/person-using-black-and-white-smartphone-and-holding-blue-230544.jpg"
+              src="images/IMG_4761.png"
               alt=""
             />
           </div>
           <div class="case-item science">
-            <img src="images/person-holding-a-smartphone-892757.jpg" alt="" />
+            <img src="images/IMG_4761.png" alt="" />
           </div>
           <div class="case-item mobile web science">
-            <img src="images/blur-close-up-code-computer-546819.jpg" alt="" />
+            <img src="images/IMG_4761.png" alt="" />
           </div>
           <div class="case-item mobile ">
             <img
-              src="images/bokeh-photography-of-person-holding-turned-on-iphone-1440727.jpg"
+              src="images/IMG_4761.png"
               alt=""
             />
           </div>
-        </div>
-      </section>
-      <!-- 服务流程 -->
-      <section id="service" class="service">
-        <h2 class="title1">服务流程</h2>
-        <p class="intro">
-          网络综合公司，提供包括网络基础服务（如域名、主机、邮箱）和网络增值服务（如网站建设和推广，网站优化）等业务
-        </p>
-        <!-- 同关于我们 -->
-        <div class="services">
-          <div class="service-item">
-            <i class="fas fa-comments"></i>
-            <h2 class="service-title">需求沟通</h2>
-            <p class="service-content">
-              客户提出网站建设的基本需求，包括设计要求及功能要求
-            </p>
-          </div>
-          <div class="service-item">
-            <i class="fas fa-gavel"></i>
-            <h2 class="service-title">项目评估</h2>
-            <p class="service-content">
-              根据客户提出的需求进行评估，估算出相应的时间与费用
-            </p>
-          </div>
-          <div class="service-item">
-            <i class="fas fa-file-signature"></i>
-            <h2 class="service-title">签订合同</h2>
-            <p class="service-content">
-              合作双方确认费用、工期、合作要求的基础上，双方共同签订合同
-            </p>
-          </div>
-          <div class="service-item">
-            <i class="fas fa-user"></i>
-            <h2 class="service-title">提案阶段</h2>
-            <p class="service-content">
-              完成网站初稿DEMO设计，包括首页风格，内页风格页面
-            </p>
-          </div>
-          <div class="service-item">
-            <i class="fas fa-chalkboard-teacher"></i>
-            <h2 class="service-title">制作阶段</h2>
-            <p class="service-content">
-              完成所有页面的设计，进行程序开发以及前后后台的页面整合
-            </p>
-          </div>
-          <div class="service-item">
-            <i class="fas fa-user-check"></i>
-            <h2 class="service-title">网站验收</h2>
-            <p class="service-content">
-              根据合同条款进行网站验收，并签署网站验收确认单
-            </p>
-          </div>
-        </div>
-      </section>
-      <!-- 团队介绍 -->
-      <section id="team-intro" class="team-intro section-bg">
-        <h2 class="title1">团队介绍</h2>
-        <!-- 团队成员容器 -->
-        <div class="team-members">
-          <!-- 团队成员 -->
-          <div class="team-member">
-            <!-- 成员照片 -->
-            <div class="profile-image">
-              <img src="images/man-wearing-black-suit-2955376.jpg" alt="" />
-            </div>
-            <!-- 成员姓名 -->
-            <h4 class="name">张紫齐</h4>
-            <!-- 成员职位 -->
-            <p class="position">前端工程师</p>
-            <!-- 成员社交账号 -->
-            <ul class="social-links">
-              <li>
-                <a href="#"><i class="fab fa-weixin"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-weibo"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-github"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-              </li>
-            </ul>
-          </div>
-          <div class="team-member">
-            <div class="profile-image">
-              <img
-                src="images/smiling-woman-wearing-black-sweater-1587009.jpg"
-                alt=""
-              />
-            </div>
-            <h4 class="name">米诗艺</h4>
-            <p class="position">UI设计师</p>
-            <ul class="social-links">
-              <li>
-                <a href="#"><i class="fab fa-weixin"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-weibo"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-github"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-              </li>
-            </ul>
-          </div>
-          <div class="team-member">
-            <div class="profile-image">
-              <img
-                src="images/selective-focus-photograph-of-man-wearing-gray-suit-jacket-1138903.jpg"
-                alt=""
-              />
-            </div>
-            <h4 class="name">纪乐泉</h4>
-            <p class="position">后端工程师</p>
-            <ul class="social-links">
-              <li>
-                <a href="#"><i class="fab fa-weixin"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-weibo"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-github"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-              </li>
-            </ul>
-          </div>
-          <div class="team-member">
-            <div class="profile-image">
-              <img src="images/business-woman-2697954_1920.jpg" alt="" />
-            </div>
-            <h4 class="name">云秋贻</h4>
-            <p class="position">市场专员</p>
-            <ul class="social-links">
-              <li>
-                <a href="#"><i class="fab fa-weixin"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-weibo"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-github"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <!-- 数据展示  -->
-      <section id="data-section" class="data-section">
-        <!-- 单个数据  -->
-        <div class="data-piece">
-          <!-- 图标 -->
-          <i class="fas fa-code"></i>
-          <!-- 数据 -->
-          <div class="num">156</div>
-          <!-- 单位 -->
-          <div class="data-desc">行代码</div>
-        </div>
-        <div class="data-piece">
-          <i class="fas fa-award"></i>
-          <div class="num">288</div>
-          <div class="data-desc">个奖项</div>
-        </div>
-        <div class="data-piece">
-          <i class="fas fa-laugh-wink"></i>
-          <div class="num">1588</div>
-          <div class="data-desc">位客户</div>
-        </div>
-        <div class="data-piece">
-          <i class="fas fa-folder"></i>
-          <div class="num">200</div>
-          <div class="data-desc">个项目</div>
         </div>
       </section>
       <!-- 公司动态 -->
@@ -458,6 +258,25 @@
           </div>
         </div>
       </section>
+      <!-- 关于我们， id用来导航菜单跳转 -->
+      <section id="about-us" class="about-us">
+        <!-- 标题 -->
+        <h2 class="title1">关注我们</h2>
+        <!-- 补充说明区域 -->
+        <p class="intro">
+          网络公司不仅仅是提供域名注册、空间租用、网站开发、网站建设与网络营销活动策划相关的企业组织。
+        </p>
+        <!-- 公司业务容器，栅格布局 -->
+        <div class="contact-me">
+          <div class="wechat-code">
+            <img src="./images/WechatIMG318.jpeg" alt="">
+          </div>
+          <div class="wechat-code">
+            <img src="./images/WechatIMG319.jpeg" alt="">
+          </div>
+        </div>
+      </section>
+
     </div>
     <!-- 底部信息 -->
     <footer>
