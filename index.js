@@ -6,6 +6,7 @@ const scrollToTop = document.querySelector(".scrollToTop");
 // 窗口滚动处理
 window.addEventListener("scroll", () => {
   // 固定导航
+  
   let height = headerEl.getBoundingClientRect().height;
 
   if (window.pageYOffset - height > 800) {
@@ -67,22 +68,22 @@ const isotope = new Isotope(".cases", {
   // percentPosition: true
 });
 
-// 成功案例筛选
-const filterBtns = document.querySelector(".filter-btns");
-// 当点击筛选按钮时
-filterBtns.addEventListener("click", e => {
-  let { target = {} } = e;
-  const filterOption = target.getAttribute("data-filter");
-  if (filterOption) {
-    // 取消其他按钮active状态
-    document
-      .querySelectorAll(".filter-btn.active")
-      .forEach(btn => btn.classList.remove("active"));
-    target.classList.add("active");
-    // 筛选
-    isotope.arrange({ filter: filterOption });
-  }
-});
+// // 成功案例筛选
+// const filterBtns = document.querySelector(".filter-btns");
+// // 当点击筛选按钮时
+// filterBtns.addEventListener("click", e => {
+//   let { target = {} } = e;
+//   const filterOption = target.getAttribute("data-filter");
+//   if (filterOption) {
+//     // 取消其他按钮active状态
+//     document
+//       .querySelectorAll(".filter-btn.active")
+//       .forEach(btn => btn.classList.remove("active"));
+//     target.classList.add("active");
+//     // 筛选
+//     isotope.arrange({ filter: filterOption });
+//   }
+// });
 
 // 滚动展示插件
 // 通用动画配置，从底部50象素滑出来
@@ -113,16 +114,6 @@ ScrollReveal().reveal(".data-section", {
     });
     dataSectionEl.style.backgroundPosition = `center calc(50% - ${dataSectionEl.getBoundingClientRect()
       .bottom / 5}px)`;
-  }
-});
-// 数据，背景视差滚动
-window.addEventListener("scroll", () => {
-  const bottom = dataSectionEl.getBoundingClientRect().bottom;
-  const top = dataSectionEl.getBoundingClientRect().top;
-  // 如果在可见区域内
-  if (bottom >= 0 && top <= window.innerHeight) {
-    dataSectionEl.style.backgroundPosition = `center calc(50% - ${bottom /
-      5}px)`;
   }
 });
 

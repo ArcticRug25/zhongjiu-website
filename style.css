@@ -118,7 +118,7 @@ header.sticky nav i {
 /* 轮播的图片和视频的大小 */
 .glide__slide img,
 .glide__slide video {
-  object-fit: cover;
+  object-fit: fill;
   width: 100vw;
   height: 100vh;
 }
@@ -190,6 +190,7 @@ header.sticky nav i {
   font-size: 18px;
   cursor: pointer;
   outline: none;
+  text-decoration: none;
 }
 
 /* ============= 内容区域 ================== */
@@ -256,6 +257,7 @@ section {
 
 /* 关于我们 */
 .about-us {
+  width: 100%;
   padding-bottom: 32px;
   padding-top: 32px;
   margin-top: 88px;
@@ -328,7 +330,6 @@ section {
 
 /* 案例筛选按钮容器 */
 .filter-btns {
-  margin-top: 54px;
   margin-bottom: 38px;
 }
 
@@ -453,6 +454,8 @@ section {
   transition: 0.4s;
   display: grid;
   justify-items: center;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 /* 成员照片遮罩 */
@@ -462,7 +465,7 @@ section {
 /* 成员照片 */
 .profile-image img {
   width: 100%;
-  height: 364px;
+  height: 440px;
   object-fit: cover;
   object-position: top center;
 }
@@ -621,6 +624,11 @@ section {
   color: var(--text-color-dark);
   font-size: 18px;
   margin-bottom: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 /* 动态摘要 */
@@ -628,16 +636,24 @@ section {
   color: var(--text-color-gray);
   letter-spacing: 0.54px;
   line-height: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 /* 阅读更多按钮 */
 .readmore-btn {
   border: 0;
   color: white;
+  display: inline-block;
   background-color: var(--primary-color);
   border-radius: 4px;
   padding: 6px 14px;
   margin-top: 24px;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* 动态鼠标移上时 */
@@ -999,6 +1015,7 @@ footer {
   .explore-btn {
     padding: 8px 18px;
     font-size: 14px;
+    text-decoration: none;
   }
 
   /* 成功案例显示为1列 */
@@ -1017,5 +1034,25 @@ footer {
   .footer-menu {
     justify-self: start;
     text-align: left;
+  }
+
+  .about-us {
+    margin-top: 20px;
+  }
+
+  .about-us .intro {
+    margin: 20px 0;
+  }
+
+  .about-us .contact-me {
+    flex-wrap: wrap;
+  }
+  
+  .about-us .wechat-code {
+    margin-bottom: 20px;
+  }
+
+  .profile-image img {
+    height: 464px;
   }
 }

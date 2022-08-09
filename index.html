@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="libs/glide/glide.theme.min.css" />
     <link rel="stylesheet" href="style.css" />
 
-    <title>峰华科技 - 创新型网络技术企业</title>
+    <title>中酒 - 酱香白酒</title>
   </head>
   <body>
     <!-- 头部 -->
@@ -24,8 +24,8 @@
       <nav>
         <a href="#home">首页</a>
         <a href="./pages/about/index.html">关于中酒</a>
-        <a href="./pages/product-list/index.html"">产品展示</a>
-        <a href="./pages/news/index.html"">公司动态</a>
+        <a href="./pages/product-list/index.html">产品展示</a>
+        <a href="./pages/news/index.html">公司动态</a>
         <a href="#about-us">关注我们</a>
         <i class="fas fa-search"></i>
       </nav>
@@ -46,26 +46,43 @@
           <div class="glide__slide">
             <!-- 轮播标题 -->
             <div class="slide-caption">
-              <h1>用创新点缀人生，让科技融入理想。</h1>
+              <h1>千年酱香，中国中酒</h1>
               <h3>
-                科技创新大平台，智慧生活新引擎。依靠科技进步推进经济跨越式发展。用创新点缀人生，让科技融入理想。
+                融酱香酒文化与东方美学一体，专为酱香爱好者打造
               </h3>
               <!-- 探索按钮 -->
-              <button class="explore-btn">探索更多</button>
+              <a href="./pages/about/index.html" class="explore-btn">关于中酒</a>
             </div>
             <!-- 背景遮罩 -->
             <div class="backdrop"></div>
             <!-- 轮播图片 -->
-            <img src="images/banner.png" alt="" />
+            <img src="images/home_banner.png" alt="" />
+          </div>
+          <!-- 单个轮播组件 -->
+          <div class="glide__slide">
+            <!-- 轮播标题 -->
+            <div class="slide-caption">
+              <h1>千年酱香，中国中酒</h1>
+              <h3>
+                融酱香酒文化与东方美学一体，专为酱香爱好者打造
+              </h3>
+              <!-- 探索按钮 -->
+              <a href="./pages/about/index.html" class="explore-btn">关于中酒</a>
+            </div>
+            <!-- 背景遮罩 -->
+            <div class="backdrop"></div>
+            <!-- 轮播图片 -->
+            <img src="images/IMG_4523.png" alt="" />
           </div>
           <!-- 第二张轮播 -->
           <div class="glide__slide">
             <div class="slide-caption left">
-              <h1>科技改变世界</h1>
+              <h1>中酒 · 荣耀1935</h1>
               <h3>
-                立足科学发展，着力自主创新。加速科技进步，为全市经济社会发展提供有力支撑。凝聚科技创意，成就创新梦想。
+                融酱香酒文化与东方美学一体，专为酱香爱好者打造
               </h3>
-              <button class="explore-btn">探索更多</button>
+              <!-- 探索按钮 -->
+              <a href="./pages/product-detail/index.html" class="explore-btn">关于中酒</a>
             </div>
             <div class="backdrop"></div>
             <!-- 轮播视频 -->
@@ -86,6 +103,7 @@
       <div class="glide__bullets" data-glide-el="controls[nav]">
         <button class="glide__bullet" data-glide-dir="=0"></button>
         <button class="glide__bullet" data-glide-dir="=1"></button>
+        <button class="glide__bullet" data-glide-dir="=2"></button>
       </div>
     </div>
     <!-- 内容容器 -->
@@ -96,7 +114,7 @@
         <!-- 团队成员容器 -->
         <div class="team-members">
           <!-- 团队成员 -->
-          <div class="team-member">
+          <a href="./pages/product-list/index.html" class="team-member">
             <!-- 成员照片 -->
             <div class="profile-image">
               <img src="images/IMG_4576.png" alt="初心" />
@@ -104,8 +122,8 @@
             <!-- 成员姓名 -->
             <h4 class="name">初心系列</h4>
             <!-- 成员职位 -->
-          </div>
-          <div class="team-member">
+          </a>
+          <a href="./pages/product-list/index.html" class="team-member">
             <div class="profile-image">
               <img
                 src="images/IMG_5948.png"
@@ -113,8 +131,8 @@
               />
             </div>
             <h4 class="name">大师级系列</h4>
-          </div>
-          <div class="team-member">
+          </a>
+          <a href="./pages/product-list/index.html" class="team-member">
             <div class="profile-image">
               <img
                 src="images/guoxiang-10.png"
@@ -122,76 +140,18 @@
               />
             </div>
             <h4 class="name">国香系列</h4>
-          </div>
-          <div class="team-member">
+          </a>
+          <a href="./pages/product-list/index.html" class="team-member">
             <div class="profile-image">
               <img src="images/IMG_5642.png" alt="问道" />
             </div>
             <h4 class="name">问道系列</h4>
-          </div>
+          </a>
         </div>
       </section>
             <!-- 成功案例 -->
       <!-- section-bg 区域灰色背景 -->
-      <section id="showcases" class="showcases section-bg">
-        <!-- 筛选按钮 -->
-        <div class="filter-btns">
-          <button class="filter-btn active" data-filter="*">
-            全部
-          </button>
-          <!-- 指定要过滤的class selector，包括. -->
-          <button class="filter-btn" data-filter=".web">
-            国香
-          </button>
-          <button class="filter-btn" data-filter=".mobile">
-            问道
-          </button>
-          <button class="filter-btn" data-filter=".science">
-            初心
-          </button>
-        </div>
-        <!-- 案例 -->
-        <div class="cases">
-          <!-- case-item样式类，web science为类别类 -->
-          <div class="case-item web science">
-            <!-- 图片 -->
-            <img
-              src="images/IMG_4761.png"
-              alt=""
-            />
-          </div>
-          <div class="case-item web science">
-            <img src="images/IMG_4761.png" alt="" />
-          </div>
-          <div class="case-item web">
-            <img src="images/IMG_4761.png" alt="" />
-          </div>
-          <div class="case-item web">
-            <img
-              src="images/IMG_4761.png"
-              alt=""
-            />
-          </div>
-          <div class="case-item mobile">
-            <img
-              src="images/IMG_4761.png"
-              alt=""
-            />
-          </div>
-          <div class="case-item science">
-            <img src="images/IMG_4761.png" alt="" />
-          </div>
-          <div class="case-item mobile web science">
-            <img src="images/IMG_4761.png" alt="" />
-          </div>
-          <div class="case-item mobile ">
-            <img
-              src="images/IMG_4761.png"
-              alt=""
-            />
-          </div>
-        </div>
-      </section>
+      
       <!-- 公司动态 -->
       <section id="company-activities" class="company-activities">
         <h2 class="title1">公司动态</h2>
@@ -204,57 +164,57 @@
           <div class="activity">
             <!-- 动态图片 -->
             <div class="act-image-wrapper">
-              <img src="images/activity01-image.jpg" alt="" />
+              <img src="images/news1.jpg" alt="" />
             </div>
             <!-- 动态元数据，包括发表日期和评论数量 -->
             <div class="meta">
               <!-- 发布日期 -->
               <p class="date-published">
-                <i class="far fa-calendar"></i> 2019年12月1日
+                <i class="far fa-calendar"></i> 2022年7月22日
               </p>
 
-              <p class="comments"><i class="far fa-comments"></i> 33条评论</p>
+              <p class="comments"><i class="far fa-comments"></i> 0条评论</p>
             </div>
             <!-- 动态标题 -->
-            <h2 class="act-title">提供互联网接入的ISP公司</h2>
+            <h2 class="act-title">中酒品牌丨中酒与中央电视台签约战略合作，正式开展全方位品牌推广活动</h2>
             <!-- 动态内容摘要 -->
             <article>
-              网络公司原本指的是提供网络服务的互联网内容提供商ICP公司，提供互联网接入的ISP公司，提供内容托管的IDC提供商，还有无线接入、网络游戏、网络视频、网络培训、网络销售。
+              中酒，深谙中华文化之道。融酱香酒文化与东方美学于一体，专为酱香爱好者打造。既担名“中国中酒”，自有独一无二品质后盾。中酒，根植于中国酱香酒核心产区茅台古镇赤水河畔，原产地地域优势与规模优势，铸就了中酒酒体的稳定和品质风格的纯正。中酒酒业董事长杨太荣先生表示：“此次合作的签约代表着中酒品牌正式开启全国范围内的推广，希望能让更多白酒爱好者了解中酒，品鉴中酒。中酒将会带着令人惊艳的酱香品质与广大消费者初次见面。”
             </article>
             <!-- 阅读更多按钮 -->
-            <button class="readmore-btn">阅读更多</button>
+            <a class="readmore-btn" target="_blank" href="https://mp.weixin.qq.com/s?__biz=MzkyNzM5MTc0OQ==&mid=2247483664&idx=1&sn=35130acb16a6b557c2f70c4fabf31705&chksm=c229887af55e016c0dd56d484ac35e1b535c8e3b7b6e83ce71d725d0e732eb08496af18dd3e0#rd">阅读更多</a>
           </div>
           <div class="activity">
             <div class="act-image-wrapper">
-              <img src="images/watercrafts-on-river-3464632.jpg" alt="" />
+              <img src="images/news1.jpg" alt="" />
             </div>
             <div class="meta">
               <p class="date-published">
-                <i class="far fa-calendar"></i> 2019年12月1日
+                <i class="far fa-calendar"></i> 2022年7月22日
               </p>
-              <p class="comments"><i class="far fa-comments"></i> 33条评论</p>
+              <p class="comments"><i class="far fa-comments"></i> 0条评论</p>
             </div>
-            <h2 class="act-title">提供互联网接入的ISP公司</h2>
+            <h2 class="act-title">中酒品牌丨中酒与中央电视台签约战略合作，正式开展全方位品牌推广活动</h2>
             <article>
-              网络公司原本指的是提供网络服务的互联网内容提供商ICP公司，提供互联网接入的ISP公司，提供内容托管的IDC提供商，还有无线接入、网络游戏、网络视频、网络培训、网络销售。
+              中酒，深谙中华文化之道。融酱香酒文化与东方美学于一体，专为酱香爱好者打造。既担名“中国中酒”，自有独一无二品质后盾。中酒，根植于中国酱香酒核心产区茅台古镇赤水河畔，原产地地域优势与规模优势，铸就了中酒酒体的稳定和品质风格的纯正。中酒酒业董事长杨太荣先生表示：“此次合作的签约代表着中酒品牌正式开启全国范围内的推广，希望能让更多白酒爱好者了解中酒，品鉴中酒。中酒将会带着令人惊艳的酱香品质与广大消费者初次见面。”
             </article>
-            <button class="readmore-btn">阅读更多</button>
+            <a class="readmore-btn" target="_blank" href="https://mp.weixin.qq.com/s?__biz=MzkyNzM5MTc0OQ==&mid=2247483664&idx=1&sn=35130acb16a6b557c2f70c4fabf31705&chksm=c229887af55e016c0dd56d484ac35e1b535c8e3b7b6e83ce71d725d0e732eb08496af18dd3e0#rd">阅读更多</a>
           </div>
           <div class="activity">
             <div class="act-image-wrapper">
-              <img src="images/red-suspension-bridge-3493772.jpg" alt="" />
+              <img src="images/news1.jpg" alt="" />
             </div>
             <div class="meta">
               <p class="date-published">
-                <i class="far fa-calendar"></i> 2019年12月1日
+                <i class="far fa-calendar"></i> 2022年7月22日
               </p>
-              <p class="comments"><i class="far fa-comments"></i> 33条评论</p>
+              <p class="comments"><i class="far fa-comments"></i> 0条评论</p>
             </div>
-            <h2 class="act-title">提供互联网接入的ISP公司</h2>
+            <h2 class="act-title">中酒品牌丨中酒与中央电视台签约战略合作，正式开展全方位品牌推广活动</h2>
             <article>
-              网络公司原本指的是提供网络服务的互联网内容提供商ICP公司，提供互联网接入的ISP公司，提供内容托管的IDC提供商，还有无线接入、网络游戏、网络视频、网络培训、网络销售。
+              中酒，深谙中华文化之道。融酱香酒文化与东方美学于一体，专为酱香爱好者打造。既担名“中国中酒”，自有独一无二品质后盾。中酒，根植于中国酱香酒核心产区茅台古镇赤水河畔，原产地地域优势与规模优势，铸就了中酒酒体的稳定和品质风格的纯正。中酒酒业董事长杨太荣先生表示：“此次合作的签约代表着中酒品牌正式开启全国范围内的推广，希望能让更多白酒爱好者了解中酒，品鉴中酒。中酒将会带着令人惊艳的酱香品质与广大消费者初次见面。”
             </article>
-            <button class="readmore-btn">阅读更多</button>
+            <a class="readmore-btn" target="_blank" href="https://mp.weixin.qq.com/s?__biz=MzkyNzM5MTc0OQ==&mid=2247483664&idx=1&sn=35130acb16a6b557c2f70c4fabf31705&chksm=c229887af55e016c0dd56d484ac35e1b535c8e3b7b6e83ce71d725d0e732eb08496af18dd3e0#rd">阅读更多</a>
           </div>
         </div>
       </section>
@@ -264,7 +224,6 @@
         <h2 class="title1">关注我们</h2>
         <!-- 补充说明区域 -->
         <p class="intro">
-          网络公司不仅仅是提供域名注册、空间租用、网站开发、网站建设与网络营销活动策划相关的企业组织。
         </p>
         <!-- 公司业务容器，栅格布局 -->
         <div class="contact-me">
