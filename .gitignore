@@ -1,1 +1,2 @@
 .DS_Store
+您还需要前往域名 DNS 服务商添加 CNAME 记录，将zhongjiuqianchen.cn的 CNAME 记录设置为zhongjiuqianchen.cn.cdn.dnsv1.com

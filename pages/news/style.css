@@ -86,6 +86,7 @@ header.sticky {
   background-color: white;
   box-shadow: 0 0 18px rgba(0, 0, 0, 0.2);
   animation: dropDown 0.5s ease-in-out forwards;
+  width: 100%;
 }
 
 /* 固定导航文字颜色为黑色 */
@@ -169,6 +170,7 @@ header.sticky nav i {
   opacity: 0.5;
   position: absolute;
   left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   /* 放置在幻灯片上层 */
@@ -360,10 +362,112 @@ footer {
   right: 30px;
 }
 
+/* ============= 公司动态 ================== */
+/* 公司动态 */
+.company-activities {
+  margin-top: 88px;
+}
+
+/* 动态栅格布局 */
+.activities {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 24px;
+  display: none;
+}
+/* 动态 */
+.activity {
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  transition: 0.4s;
+}
+
+/* 动态图片容器 */
+.act-image-wrapper {
+  height: 255px;
+  overflow: hidden;
+  /* 抵消activity的padding */
+  margin: -24px;
+  margin-bottom: 0;
+}
+
+/* 动态图片 */
+.act-image-wrapper img {
+  min-height: 300px;
+  object-fit: cover;
+}
+
+/* 动态元数据 */
+.activity .meta {
+  margin-top: 20px;
+  margin-bottom: 12px;
+  color: var(--text-color-light-gray);
+  font-size: 12px;
+  display: flex;
+}
+
+/* 评论 */
+.activity .meta > p:last-child {
+  margin-left: 36px;
+}
+
+/* 动态标题 */
+.act-title {
+  color: var(--text-color-dark);
+  font-size: 18px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* 动态摘要 */
+.activity article {
+  color: var(--text-color-gray);
+  letter-spacing: 0.54px;
+  line-height: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* 阅读更多按钮 */
+.readmore-btn {
+  border: 0;
+  color: white;
+  background-color: var(--primary-color);
+  border-radius: 4px;
+  padding: 6px 14px;
+  margin-top: 24px;
+  cursor: pointer;
+}
+
+/* 动态鼠标移上时 */
+.activity:hover {
+  transform: translateY(-20px) scale(1.05);
+  box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.1);
+}
+
+
 /* 自适应，小于1100象素时 */
 @media (max-width: 1100px) {
   /* 导航设置为不可见，点击折叠按钮显示全屏导航 */
   header nav {
+    display: none;
+  }
+
+  .activities {
+    display: grid;
+    grid-template-columns: 2fr;
+    row-gap: 36px;
+  }
+
+  .news-list {
     display: none;
   }
 
@@ -508,6 +612,7 @@ footer {
   }
   /* 公司动态改为两列 */
   .activities {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     row-gap: 36px;
   }
@@ -518,6 +623,16 @@ footer {
   /* 轮播标题字号缩小  */
   .slide-caption h1 {
     font-size: 48px;
+  }
+
+  .activities {
+    display: grid;
+    grid-template-columns: 2fr;
+    row-gap: 36px;
+  }
+
+  .news-list {
+    display: none;
   }
 
   .slide-caption h3 {
@@ -560,6 +675,16 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .activities {
+    display: grid;
+    grid-template-columns: 2fr;
+    row-gap: 36px;
+  }
+
+  .news-list {
+    display: none;
+  }
+
   /* 团队成员设置为1列 */
   .team-members {
     grid-template-columns: minmax(200px, 400px);
@@ -575,6 +700,7 @@ footer {
   }
   /* 公司动态设置为1列 */
   .activities {
+    display: grid;
     grid-template-columns: 1fr;
     row-gap: 36px;
   }
@@ -604,6 +730,16 @@ footer {
 
 /* 小于576象素 */
 @media (max-width: 576px) {
+  .news-list {
+    display: none;
+  }
+
+  .activities {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 36px;
+  }
+
   /* 缩小轮播标题文字，探索更多按钮文字 */
   .slide-caption h1 {
     font-size: 28px;
@@ -731,6 +867,7 @@ footer {
 }
 
 .news-more {
+  display: inline-block;
   margin-top: 15px;
   width: 140px;
   line-height: 42px;
@@ -743,6 +880,7 @@ footer {
   cursor: pointer;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 3px;
+  text-decoration: none;
 }
 
 .news-item {
@@ -836,4 +974,3 @@ footer {
 .news-item:hover {
   background-color: #FCF1F0;
 }
-
