@@ -203,7 +203,7 @@ header.sticky nav i {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url(../../images/about-bg.png) repeat-y center; 
+  /* background: url(../../images/about-bg.png) repeat-y center;  */
 }
 
 /* 所有section都按grid布局 */
@@ -528,7 +528,7 @@ section {
   width: 100vw;
   height: 255px;
   /* 背景，自动拉伸，取中间部分 */
-  background-image: url(images/adult-business-computer-contemporary-380769.jpg);
+  /* background-image: url(images/adult-business-computer-contemporary-380769.jpg); */
   background-size: cover;
   background-position: center;
 
@@ -1053,4 +1053,8 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.img-group {
+  margin: 1.25rem 0;
 }
