@@ -35,18 +35,6 @@ const staggeringOption = {
   origin: "bottom"
 };
 
-
-// 数据，背景视差滚动
-window.addEventListener("scroll", () => {
-  const bottom = dataSectionEl.getBoundingClientRect().bottom;
-  const top = dataSectionEl.getBoundingClientRect().top;
-  // 如果在可见区域内
-  if (bottom >= 0 && top <= window.innerHeight) {
-    dataSectionEl.style.backgroundPosition = `center calc(50% - ${bottom /
-      5}px)`;
-  }
-});
-
 /* ***** 响应式**** */
 
 // 折叠按钮
@@ -75,7 +63,7 @@ function renderProductList() {
 
 function productTpl({ id, name, imgArr }) {
   return `
-  <a href="../product-detail/index.html?${id}" class="product-item">
+  <a href="../product-detail/index.html?id=${id}" class="product-item">
     <div class="product-img">
       <img src="${imgArr[0]}" alt="${name}">
     </div>

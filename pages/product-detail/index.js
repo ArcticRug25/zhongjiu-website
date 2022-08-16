@@ -35,18 +35,6 @@ const staggeringOption = {
   origin: "bottom"
 };
 
-
-// 数据，背景视差滚动
-window.addEventListener("scroll", () => {
-  const bottom = dataSectionEl.getBoundingClientRect().bottom;
-  const top = dataSectionEl.getBoundingClientRect().top;
-  // 如果在可见区域内
-  if (bottom >= 0 && top <= window.innerHeight) {
-    dataSectionEl.style.backgroundPosition = `center calc(50% - ${bottom /
-      5}px)`;
-  }
-});
-
 /* ***** 响应式**** */
 
 // 折叠按钮
@@ -63,3 +51,42 @@ document.addEventListener("scrollStart", () => {
     headerEl.classList.remove("open");
   }
 });
+getProduct();
+function getParams(key) {
+  let params = new URLSearchParams(document.location.search.substring(1));
+  return Number(params.get(key));
+}
+
+function getProduct() {
+  const id = getParams('id')
+  const curProduct = PRODUCT_LIST.find(product => product.id === id);
+
+  renderProductTpl(curProduct);
+}
+
+function renderProductTpl(curProduct) {
+  const oProductDetail = document.querySelector('.product-detail')
+  oProductDetail.insertAdjacentHTML('beforeend', createProductTpl(curProduct))
+}
+
+function createProductTpl({name, imgArr}) {
+  return `
+  <div class="product-img">
+            <img src="${imgArr[0]}">
+          </div>
+          <div class="product-intro">
+            <h1>${name}</h1>
+            <div class="intro-item">品名: ${name}</div>
+            <div class="intro-item">香型: 酱香型白酒</div>
+            <div class="intro-item">原料: 水、高粱、小麦</div>
+            <div class="intro-item">执行标准号: GB/T26760-2011 (优级)</div>
+            <div class="intro-item">容量: 500ml</div>
+            <div class="intro-item">酒精度: 53%vol</div>
+            <div class="intro-item">适用场景: 收藏、小聚、送礼、自饮</div>
+            <div class="intro-item">储存方法: 在常温下保存</div>
+            <div class="intro-item">生产厂家：仁怀市中酒黔晨酒业有限公司</div>
+            <div class="intro-item">出品公司：贵州省仁怀市中酒酒业销售有限公司</div>
+            <div class="intro-item">厂址（原产地）：贵州省仁怀市茅台镇</div>
+          </div>
+  `
+}

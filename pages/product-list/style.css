@@ -513,6 +513,10 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 36px;
   }
+
+  .product-list {
+    grid-template-columns: repeat(2, 240px) !important;
+  }
 }
 
 /* 小于992象素时 */
@@ -545,6 +549,10 @@ footer {
   /* 成功案例图片设置为3列 */
   .showcases .case-item {
     width: calc(100vw / 3);
+  }
+
+  .product-list {
+    grid-template-columns: repeat(2, 240px) !important;
   }
 }
 
@@ -602,6 +610,10 @@ footer {
   .footer-menu {
     text-align: right;
   }
+
+  .product-list {
+    grid-template-columns: repeat(1, 240px) !important;
+  }
 }
 
 /* 小于576象素 */
@@ -654,12 +666,15 @@ footer {
 }
 
 .product-list {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  /* display: flex; */
+  /* justify-content: space-evenly; */
+  /* align-items: center; */
   width: 100%;
   margin-top: 40px;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(4, 240px);
+  gap: 15px;
 }
 
 .product-item {
