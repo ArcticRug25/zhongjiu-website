@@ -63,3 +63,25 @@ document.addEventListener("scrollStart", () => {
     headerEl.classList.remove("open");
   }
 });
+
+renderProductList()
+function renderProductList() {
+  const oProductList = document.querySelector('.product-list')
+  const productListTpl = PRODUCT_LIST.reduce((prev, item) => {
+    return prev += productTpl(item);
+  }, '')
+  oProductList.insertAdjacentHTML('beforeend', productListTpl)
+}
+
+function productTpl({ id, name, imgArr }) {
+  return `
+  <a href="../product-detail/index.html?${id}" class="product-item">
+    <div class="product-img">
+      <img src="${imgArr[0]}" alt="${name}">
+    </div>
+    <span class="product-name">
+      ${name}
+    </span>
+  </a>
+  `
+}
