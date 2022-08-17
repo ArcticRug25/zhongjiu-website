@@ -771,6 +771,19 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .nav-phone-intro,
+  .nav-phone-culture {
+    display: inline !important;
+  }
+
+  .nav-about {
+    display: none !important;
+  }
+
+  .nav-dialog {
+    display: inline;
+  }
+
   /* 折叠菜单样式，显示出来 */
   header .burger {
     display: block;
@@ -852,6 +865,7 @@ footer {
     /* 下滑效果 */
     animation: slideDown 0.6s ease-out forwards;
   }
+
   /* 全屏导航显示时，导航菜单项样式和动画 */
   header.open nav > * {
     margin: 4px 0;
@@ -1096,4 +1110,37 @@ footer {
 
 .culture > .readmore-btn {
   margin-top: 0;
+}
+
+nav:hover .nav-dialog {
+  position: absolute;
+  color: var(--text-color-lightest);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  right: 393px;
+  width: 60px;
+  flex-wrap: wrap;
+  box-sizing: content-box;
+  padding: 6px 10px;
+  padding-top: 15px;
+}
+
+nav:hover .nav-dialog > a {
+  padding: 0;
+  margin: 0;
+}
+
+nav:hover .nav-dialog > .nav-intro {
+  margin-bottom: 15px;
+}
+
+.nav-dialog{
+  display: none;
+}
+
+.nav-phone-intro,
+.nav-phone-culture {
+  display: none;
 }
