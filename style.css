@@ -1112,7 +1112,11 @@ footer {
   margin-top: 0;
 }
 
-nav:hover .nav-dialog {
+.nav-about {
+  padding-bottom: 80px;
+}
+
+.nav-about:hover + .nav-dialog {
   position: absolute;
   color: var(--text-color-lightest);
   display: flex;
@@ -1127,12 +1131,12 @@ nav:hover .nav-dialog {
   padding-top: 15px;
 }
 
-nav:hover .nav-dialog > a {
+.nav-about:hover + .nav-dialog > a {
   padding: 0;
   margin: 0;
 }
 
-nav:hover .nav-dialog > .nav-intro {
+.nav-about:hover + .nav-dialog > .nav-intro {
   margin-bottom: 15px;
 }
 
