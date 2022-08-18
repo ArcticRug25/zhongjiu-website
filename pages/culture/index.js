@@ -44,19 +44,6 @@ burgerEl.addEventListener("click", () => {
   headerEl.classList.toggle("open");
 });
 
-// 流畅滚动
-const scroll = new SmoothScroll('nav a[href*="#"], .scrollToTop a[href*="#"]', {
-  // 自动计算固定导航的高度
-  header: "header",
-  // 偏移80象素
-  offset: 80
-});
-
-// 探索更多按钮的处理函数
-const exploreBtnEl = document.querySelector(".explore-btn");
-exploreBtnEl.addEventListener("click", () => {
-  scroll.animateScroll(document.querySelector("#about-us"));
-});
 
 // 折叠菜单打开时，如果点击了链接，则自动关闭全屏导航
 document.addEventListener("scrollStart", () => {
