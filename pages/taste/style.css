@@ -131,6 +131,10 @@ header.sticky nav i {
   justify-content: center;
 }
 
+body{
+  background-color: #efefef;
+}
+
 /* 轮播标题容器 */
 .slide-caption {
   position: absolute;
@@ -457,11 +461,70 @@ footer {
 .taste-steps{
   margin-top: 80px;
   display: grid;
+  gap: 60px;
   grid-template-columns: repeat(2, 1fr);
+  font-family: 'Source Han Sans SC';
+}
+.step {
+  width: 31.875rem;
+  height: 15.6875rem;
+  background: #fff;
+  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  list-style: none;
+  overflow: hidden;
 }
 
-.step {
-  
+.step-title {
+  position: relative;
+  background-color: #E1D3BE;
+  width: 100%;
+  height: 34%;
+}
+
+.step-number {
+  position: absolute;
+  display: inline-flex;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 100%;
+  line-height: 100%;
+  font-size: 82px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.title-content {
+  height: 100%;
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.step-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 66%;
+  padding: 20px 50px;
+}
+
+.step-content>span {
+  text-align: center;
+  font-size: 14px;
+  line-height: 2em;
+}
+
+.taste-imgs {
+  width: 100%;
+}
+
+.taste-imgs > img {
+  border-radius: 8px;
+  margin-top: 60px;
 }
 
 /* 自适应，小于1100象素时 */
@@ -682,6 +745,15 @@ footer {
   .showcases .case-item {
     width: calc(100vw / 3);
   }
+
+  .step {
+    width: 22rem;
+  }
+
+  .taste-steps{
+    grid-template-columns: repeat(2, 1fr);
+    font-family: 'Source Han Sans SC';
+  }
 }
 
 /* 小于768象素时 */
@@ -749,6 +821,14 @@ footer {
   .footer-menu {
     text-align: right;
   }
+
+  .step {
+    width: 30rem;
+  }
+
+  .taste-steps{
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 /* 小于576象素 */
@@ -793,6 +873,10 @@ footer {
   .footer-menu {
     justify-self: start;
     text-align: left;
+  }
+
+  .step {
+    width: 30rem;
   }
 }
 

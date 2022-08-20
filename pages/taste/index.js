@@ -53,3 +53,27 @@ document.addEventListener("scrollStart", () => {
     headerEl.classList.remove("open");
   }
 });
+
+
+renderTasteSteps()
+function renderTasteSteps() {
+  const oTasteSteps = document.querySelector('.taste-steps')
+  const tasteStepsTpl = TASTE_STEP.reduce((prev, item) => {
+    return prev += stepTpl(item);
+  }, '')
+  oTasteSteps.insertAdjacentHTML('beforeend', tasteStepsTpl)
+}
+
+function stepTpl({ step, title, content }) {
+  return `
+  <li class="step">
+  <div class="step-title">
+    <span class="step-number">${step}</span>
+    <span class="title-content">${title}</span>
+  </div>
+  <div class="step-content">
+    <span>${content}</span>
+  </div>
+</li>
+  `
+}
