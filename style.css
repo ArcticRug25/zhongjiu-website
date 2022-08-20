@@ -209,7 +209,7 @@ section {
   display: grid;
   /* 单元格都居中对齐 */
   justify-items: center;
-  max-width: 1180px;
+  /* max-width: 1180px; */
   padding: 0 80px;
 }
 
@@ -701,6 +701,10 @@ footer {
 .contact-us {
   justify-self: start;
   color: var(--text-color-lightest);
+}
+
+.contact-us .contact-phone {
+  font-size: 18px;
 }
 
 /* 联系我们，文字 */

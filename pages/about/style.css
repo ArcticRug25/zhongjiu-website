@@ -238,6 +238,7 @@ section {
   margin: 28px 0 60px 0;
   font-size: 18px;
   color: var(--text-color-dark-gray);
+  text-indent: 2em;
 }
 
 #company-intro {
