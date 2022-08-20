@@ -1139,7 +1139,8 @@ footer {
   border: 2rpx solid green;
 }
  
-.nav-about:hover + .nav-dialog {
+.nav-about:hover + .nav-dialog,
+.nav-dialog:hover {
   position: absolute;
   color: var(--text-color-lightest);
   display: flex;
@@ -1154,12 +1155,15 @@ footer {
   padding-top: 15px;
 }
 
-.nav-about:hover + .nav-dialog > a {
+.nav-about:hover + .nav-dialog > a,
+.nav-dialog:hover > a {
   padding: 0;
   margin: 0;
 }
 
 .nav-about:hover + .nav-dialog > .nav-intro,
+.nav-dialog:hover > .nav-intro,
+.nav-dialog:hover > .nav-culture,
 .nav-about:hover + .nav-dialog > .nav-culture {
   margin-bottom: 15px;
 }
