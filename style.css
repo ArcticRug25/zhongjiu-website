@@ -53,9 +53,17 @@ header {
 
 /* logo */
 .logo {
+  height: 80px;
   font-size: 24px;
   font-weight: 600;
   color: var(--text-color-lightest);
+}
+
+.logo > img {
+  height: 80px;
+  object-fit: contain;
+  position: relative;
+  left: -150px;
 }
 
 /* 导航 */
@@ -1117,10 +1125,20 @@ footer {
 }
 
 .nav-about {
-  padding: 0 0px;
-  padding-bottom: 100px;
+  position: relative;
 }
 
+.nav-about::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 200px;
+  width: 200px;
+  border: 2rpx solid green;
+}
+ 
 .nav-about:hover + .nav-dialog {
   position: absolute;
   color: var(--text-color-lightest);
@@ -1141,7 +1159,8 @@ footer {
   margin: 0;
 }
 
-.nav-about:hover + .nav-dialog > .nav-intro {
+.nav-about:hover + .nav-dialog > .nav-intro,
+.nav-about:hover + .nav-dialog > .nav-culture {
   margin-bottom: 15px;
 }
 
@@ -1150,7 +1169,8 @@ footer {
 }
 
 .nav-phone-intro,
-.nav-phone-culture {
+.nav-phone-culture,
+.nav-phone-taste {
   display: none;
 }
 
