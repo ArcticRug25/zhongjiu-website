@@ -5,8 +5,10 @@ services:
     image: nginx
     ports:
       - 80:80
+      - 443:443
     volumes:
       - ./nginx/conf.d/:/etc/nginx/conf.d
       - ./:/var/www/html/
+      - ./nginx/cert/:/etc/nginx/cert/
       # - ./videos/:/var/www/static/
       # - ./images/:/var/www/static/
