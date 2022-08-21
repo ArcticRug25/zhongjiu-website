@@ -802,7 +802,8 @@ footer {
 
 
   .nav-phone-intro,
-  .nav-phone-culture {
+  .nav-phone-culture,
+  .nav-phone-taste {
     display: inline !important;
   }
 
