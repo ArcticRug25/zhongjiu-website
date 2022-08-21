@@ -3,6 +3,14 @@ const headerEl = document.querySelector("header");
 // 返回顶部实例
 const scrollToTop = document.querySelector(".scrollToTop");
 
+// 动态添加meta资源https
+if (window.location.protocol.split(":")[0] == 'https') {
+	var meta = document.createElement('meta');
+	meta.content = "upgrade-insecure-requests";
+	meta.setAttribute('http-equiv', "Content-Security-Policy");
+	document.getElementsByTagName('head')[0].appendChild(meta);
+}
+
 // 窗口滚动处理
 window.addEventListener("scroll", () => {
   // 固定导航
