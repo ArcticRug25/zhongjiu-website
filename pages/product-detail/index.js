@@ -1,3 +1,4 @@
+import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js'
 // 导航实例
 const headerEl = document.querySelector("header");
 // 返回顶部实例
@@ -54,7 +55,9 @@ document.addEventListener("scrollStart", () => {
     headerEl.classList.remove("open");
   }
 });
+
 getProduct();
+
 function getParams(key) {
   let params = new URLSearchParams(document.location.search.substring(1));
   return Number(params.get(key));
@@ -65,20 +68,75 @@ function getProduct() {
   const curProduct = PRODUCT_LIST.find(product => product.id === id);
 
   renderProductTpl(curProduct);
+  initProductVideo(curProduct);
+  initProductSwiper(curProduct);
 }
 
 function renderProductTpl(curProduct) {
   const oProductDetail = document.querySelector('.product-detail')
-  oProductDetail.insertAdjacentHTML('beforeend', createProductTpl(curProduct))
+  oProductDetail.insertAdjacentHTML('afterbegin', createProductTpl(curProduct));
 }
 
-function createProductTpl({name, imgArr}) {
+function initProductVideo({video}) {
+  if (video) {
+    const oHome = document.querySelector('#home');
+    const oVideo = document.createElement('video');
+    const oImg = oHome.querySelector('img');
+    oVideo.src = video;
+    oVideo.loop = true;
+    oVideo.autoplay = true;
+    
+    oHome.removeChild(oImg);
+    oHome.insertAdjacentElement('afterbegin', oVideo);
+  }
+}
+
+function initProductSwiper({imgArr}) {
+  if (imgArr.length > 1) {
+    const oSwiperWrapper = document.querySelector('.swiper-wrapper');
+    const swiperItems = imgArr.reduce((prev, item) => {
+      return prev += createSwiperItem(item);
+    }, '')
+    oSwiperWrapper.innerHTML = '';
+    oSwiperWrapper.insertAdjacentHTML('afterbegin', swiperItems);
+    initSwiper();
+  }
+}
+     
+function initSwiper() {
+  new Swiper('.product-img', {
+    loop: true,
+    autoplay: {
+      delay: 2000,
+      stopOnLastSlide: false,
+      disableOnInteraction: false
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable :true,
+    },
+  })
+}
+
+function createSwiperItem(img) {
   return `
-  <div class="product-img">
-            <img src="${imgArr[0]}">
+    <div class="swiper-slide">
+      <img src="${img}" />
+    </div>
+  `
+}
+
+function createProductTpl({name, imgArr, price}) {
+  return `
+          <div class="product-img">
+            <div class="swiper-wrapper">
+              <img src="${imgArr[0]}">
+            </div>
+            <div class="swiper-pagination"></div>
           </div>
           <div class="product-intro">
             <h1>${name}</h1>
+            <h1 class="product-price">零售价：${price} 元/瓶</h1>
             <div class="intro-item">品名: ${name}</div>
             <div class="intro-item">香型: 酱香型白酒</div>
             <div class="intro-item">原料: 水、高粱、小麦</div>
