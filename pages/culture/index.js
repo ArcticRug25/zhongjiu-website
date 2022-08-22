@@ -7,6 +7,7 @@ const scrollToTop = document.querySelector(".scrollToTop");
 window.addEventListener("scroll", () => {
   // 固定导航
   let height = headerEl.getBoundingClientRect().height;
+  const logoImg = document.querySelector('.logo img');
 
   if (window.pageYOffset - height > 800) {
     if (!headerEl.classList.contains("sticky")) {
