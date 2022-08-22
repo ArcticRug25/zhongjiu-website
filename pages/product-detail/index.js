@@ -80,13 +80,16 @@ function renderProductTpl(curProduct) {
 function initProductVideo({video}) {
   if (video) {
     const oHome = document.querySelector('#home');
+    const oDrop = document.querySelector('.backdrop');
     const oVideo = document.createElement('video');
     const oImg = oHome.querySelector('img');
     oVideo.src = video;
     oVideo.loop = true;
     oVideo.autoplay = true;
-    
+    oVideo.controls = true;
     oHome.removeChild(oImg);
+    oHome.removeChild(oDrop);
+    
     oHome.insertAdjacentElement('afterbegin', oVideo);
   }
 }
