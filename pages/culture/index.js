@@ -11,9 +11,11 @@ window.addEventListener("scroll", () => {
   if (window.pageYOffset - height > 800) {
     if (!headerEl.classList.contains("sticky")) {
       headerEl.classList.add("sticky");
+      logoImg.src = 'https://zhongjiu-img-1305730468.cos.ap-shanghai.myqcloud.com/logo/logo-black.png'
     }
   } else {
     headerEl.classList.remove("sticky");
+    logoImg.src = 'https://zhongjiu-img-1305730468.cos.ap-shanghai.myqcloud.com/logo/logo-white.png'
   }
 
   // 显示返回顶部

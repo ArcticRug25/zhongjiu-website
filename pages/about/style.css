@@ -53,9 +53,16 @@ header {
 
 /* logo */
 .logo {
+  height: 80px;
+  width: 80px;
   font-size: 24px;
   font-weight: 600;
   color: var(--text-color-lightest);
+}
+
+.logo > img {
+  height: 80px;
+  object-fit: contain;
 }
 
 /* 导航 */

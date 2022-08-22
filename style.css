@@ -54,6 +54,7 @@ header {
 /* logo */
 .logo {
   height: 80px;
+  width: 80px;
   font-size: 24px;
   font-weight: 600;
   color: var(--text-color-lightest);
@@ -62,8 +63,6 @@ header {
 .logo > img {
   height: 80px;
   object-fit: contain;
-  position: relative;
-  left: -150px;
 }
 
 /* 导航 */
